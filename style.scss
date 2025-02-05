@@ -1,0 +1,331 @@
+// Variables
+$primary-color: #573c27;
+$secondary-color: #2f1000;
+$highlight-color: #ffcc00;
+$background-color: #f8f9fa;
+$text-color: #333;
+$completed-bg-color: #d4edda;
+$completed-text-color: #6c757d;
+$font-family: "Cherry Bomb One", serif;
+$space-xs: 8px;
+$space-sm: 15px;
+$space-md: 20px;
+$space-lg: 30px;
+$space-xl: 40px;
+
+// General Styling
+body {
+  font-family: $font-family;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+h1, h2, h3 {
+  color: $secondary-color;
+}
+
+// Navbar Styling
+.navbar {
+  background-color: $primary-color;
+
+  .navbar-brand, .nav-link {
+    color: white !important;
+  }
+
+  .navbar-brand:hover, .nav-link:hover {
+    color: $highlight-color !important;
+  }
+}
+
+// Cover Section
+.cover {
+  background-image: url('./images/🤎🍂.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: white;
+  padding: $space-lg 0;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: $space-sm;
+  }
+
+  p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(125, 120, 120, 0.8);
+  }
+}
+
+// Trending Photo
+.trending-photos {
+    padding: 60px 0;
+    background-color: #fff;
+
+    .section-title {
+        text-align: center;
+        font-size: 2rem;
+        color: #2f1000;
+        margin-bottom: 30px;
+    }
+
+    .photo-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .photo-info {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 15px;
+            background: #f8f9fa;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #573c27;
+
+            .likes, .comments {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+
+            i {
+                color: #d9534f;
+            }
+
+            .comments i {
+                color: #007bff;
+            }
+        }
+    }
+
+    .photo-card:hover {
+        transform: scale(1.03);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+}
+
+
+// Recent Uploads
+.recent-uploads {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+    
+    .section-title {
+        text-align: center;
+        font-size: 2rem;
+        color: #2f1000;
+        margin-bottom: 30px;
+    }
+
+    .upload-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .upload-info {
+            padding: 15px;
+            text-align: center;
+
+            h3 {
+                font-size: 1.4rem;
+                margin-bottom: 5px;
+            }
+
+            p {
+                font-size: 1rem;
+                color: #573c27;
+                margin-bottom: 10px;
+
+                a {
+                    color: #2f1000;
+                    font-weight: bold;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .btn-profile {
+                background: #573c27;
+                color: white;
+                border: none;
+                padding: 8px 15px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background 0.3s ease;
+
+                &:hover {
+                    background: #2f1000;
+                }
+            }
+        }
+    }
+
+    .upload-card:hover {
+        transform: scale(1.03);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+}
+
+
+// Carousel Styling
+.carousel-item {
+    img {
+      border-radius: 10px;
+      height: 200px;
+      object-fit: cover;
+      margin: $space-xs;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      }
+    }
+  
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+    }
+  }
+  
+
+// Task Manager Section
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+  margin-bottom: $space-sm;
+
+  button {
+    margin-left: $space-sm;
+  }
+  
+  &.completed {
+    background-color: $completed-bg-color;
+    color: $completed-text-color;
+    text-decoration: line-through;
+  }
+}
+
+.addTask {
+  background-color: $primary-color;
+  color: white;
+
+  &:hover {
+    background-color: $secondary-color;
+    color: white;
+  }
+}
+
+.alphabet, .priority {
+  background-color: $primary-color;
+  color: white;
+
+  &:hover {
+    background-color: $secondary-color;
+    color: white;
+  }
+}
+
+#taskInput {
+  border: 2px solid #5a5a5a;
+  border-radius: 8px;
+  padding: $space-sm;
+  font-size: 1rem;
+  margin-bottom: $space-md;
+  width: 100%;
+}
+
+// Footer Styling
+footer {
+    background-color: #573c27;
+    a {
+      transition: color 0.3s ease;
+      &:hover {
+        color: #ffcc00 !important;
+      }
+    }
+    .social-icons {
+      a {
+        font-size: 1.5rem;
+        &:hover {
+          color: #ffcc00 !important;
+        }
+      }
+    }
+  }
+  
+
+// Responsive Design
+@media (max-width: 768px) {
+  .hero-section {
+    padding: $space-md $space-xs;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 1.2rem;
+  }
+
+  .carousel-item img {
+    height: 150px;
+  }
+
+  #taskForm input {
+    padding: $space-xs;
+  }
+
+  #taskForm button {
+    font-size: 1rem;
+    padding: $space-xs $space-sm;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-item img {
+    height: 120px;
+  }
+}
+
+// Keyframes for Fade In
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
