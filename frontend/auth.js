@@ -1,4 +1,4 @@
-const BASE_URL = "https://flexibackend-r3os76bcz-pinkbutterflys-projects.vercel.app"; 
+const BASE_URL = "https://flexisaf-1.onrender.com"; 
 
 // Signup function
 async function signup(event) {
