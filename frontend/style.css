@@ -246,6 +246,47 @@ footer .social-icons a:hover {
     padding: 8px 15px;
   }
 }
+.form-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+}
+.form-container h2 {
+  margin-bottom: 20px;
+}
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.form-container button:hover {
+  background: #0056b3;
+}
+.form-container p {
+  margin-top: 10px;
+}
+.form-container p a {
+  color: #007bff;
+  text-decoration: none;
+}
+.form-container p a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 576px) {
   .carousel-item img {
     height: 120px;
